@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px 15px 15px;
+  background-color: #38404b;
+  color: #94adcf;
+  font-size: 18px;
+  word-break: break-word;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.input-task {
+  width: 100%;
+  padding: 3px 24px 3px 3px;
+  border: none;
+  border-radius: 3px;
+  color: #38404b;
+  background: #b7cdec;
+  font-size: 18px;
+  outline: none;
+}
+
+.input-task::placeholder {
+  color: #38404b;
+  opacity: 0.5;
+}
+
+.add-task {
+  position: absolute;
+  right: 0;
+  padding: 2px 0;
+  color: #38404b;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.tasks-list {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0;
+}
+
+.tasks-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 15px auto;
+  list-style: none;
+  border: solid #94adcf 1px;
+  border-radius: 10px;
+}
+
+.tasks-list__item.checked {
+  border-color: rgba(148, 173, 207, 0.2);
+}
+
+.tasks-list__text.checked {
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 50px;
+  margin-left: 20px;
+}
+
+.remove-btn {
+  color: #94adcf;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.material-icons:hover {
+  opacity: 1;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 4px;
+  left: 0;
+  border: 2px solid #38404b;
+  border-radius: 3px;
+  background-color: #94adcf;
+}
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 9px;
+  border: solid #38404b;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
