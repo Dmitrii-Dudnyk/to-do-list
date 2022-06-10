@@ -28,7 +28,7 @@ addListMarkup();
 
 addTaskBtn.addEventListener("click", () => {
   if (input.value != "") {
-    tasks.unshift(new Task(input.value));
+    tasks.push(new Task(input.value));
     updateLocalStorage();
     addListMarkup();
     input.value = "";
@@ -37,7 +37,7 @@ addTaskBtn.addEventListener("click", () => {
 
 input.addEventListener("keydown", e => {
   if (e.keyCode === 13 && input.value != "") {
-    tasks.unshift(new Task(input.value));
+    tasks.push(new Task(input.value));
     updateLocalStorage();
     addListMarkup();
     input.value = "";
