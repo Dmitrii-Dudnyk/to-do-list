@@ -13,7 +13,7 @@ function Task(description) {
 
 function createListMarkup(task, index) {
   return `
-    <li class="tasks-list__item">
+    <li class="tasks-list__item ${task.completed ? "checked" : ""}">
       <span class="tasks-list__text ${task.completed ? "checked" : ""}">${task.description}</span>
       <div class="btn-box">
         <input class="complete-btn" type="checkbox" ${task.completed ? "checked" : ""}>
