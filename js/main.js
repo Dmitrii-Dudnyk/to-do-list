@@ -76,9 +76,11 @@ function addEventClickBtns() {
       }
     });
     removeBtn[i].addEventListener("click", () => {
-      tasks.splice(i, 1);
-      updateLocalStorage();
-      addListMarkup();
+      if (confirm("You really want to delete the task?")) {
+        tasks.splice(i, 1);
+        updateLocalStorage();
+        addListMarkup();
+      }
     });
   }
 }
